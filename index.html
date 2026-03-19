@@ -37,12 +37,16 @@ body{
   animation:fadeIn 1s ease forwards;
 }
 
-/* FOTO PREMIUM */
+/* FOTO PRO (AJUSTADA) */
 .foto{
-  width:160px;
-  height:160px;
+  width:170px;
+  height:170px;
   border-radius:50%;
   object-fit:cover;
+
+  /* 🔥 ENCUADRE CORREGIDO */
+  object-position: center 20%;
+
   border:4px solid #d4af37;
   margin:15px auto;
   display:block;
@@ -89,10 +93,10 @@ body{
   animation:fadeIn 1s ease forwards;
 }
 
-.btn:nth-child(1){animation-delay:0.5s;}
-.btn:nth-child(2){animation-delay:0.6s;}
-.btn:nth-child(3){animation-delay:0.7s;}
-.btn:nth-child(4){animation-delay:0.8s;}
+.btn:nth-of-type(1){animation-delay:0.5s;}
+.btn:nth-of-type(2){animation-delay:0.6s;}
+.btn:nth-of-type(3){animation-delay:0.7s;}
+.btn:nth-of-type(4){animation-delay:0.8s;}
 
 .btn:hover{
   transform:scale(1.04);
