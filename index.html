@@ -14,77 +14,128 @@ body{
   text-align:center;
 }
 
+/* CONTENEDOR */
 .container{
-  max-width:400px;
+  max-width:420px;
   margin:auto;
   padding:20px;
+  animation:fadeIn 0.8s ease;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
 /* LOGO */
 .logo-img{
-  width:150px;
-  margin:30px auto 10px;
+  width:160px;
+  margin:30px auto 5px;
   display:block;
+  opacity:0;
+  animation:fadeIn 1s ease forwards;
 }
 
-/* FOTO */
+/* FOTO PREMIUM */
 .foto{
-  width:110px;
-  height:110px;
+  width:160px;
+  height:160px;
   border-radius:50%;
   object-fit:cover;
-  border:3px solid #d4af37;
-  margin:10px auto;
+  border:4px solid #d4af37;
+  margin:15px auto;
   display:block;
+  box-shadow:0 0 25px rgba(212,175,55,0.5);
+  opacity:0;
+  animation:fadeIn 1s ease 0.2s forwards;
 }
 
 /* NOMBRE */
 .name{
-  font-size:22px;
-  margin-top:10px;
+  font-size:24px;
   font-weight:bold;
+  margin-top:10px;
+  opacity:0;
+  animation:fadeIn 1s ease 0.3s forwards;
 }
 
 .role{
   color:#d4af37;
-  margin-bottom:20px;
+  margin-bottom:25px;
+  font-size:16px;
+  opacity:0;
+  animation:fadeIn 1s ease 0.4s forwards;
 }
 
 /* BOTONES */
 .btn{
-  display:block;
-  background:#1a1a1a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:linear-gradient(145deg,#1c1c1c,#121212);
   color:white;
   text-decoration:none;
-  padding:15px;
-  margin:10px 0;
-  border-radius:12px;
-  border:1px solid #333;
+  padding:16px;
+  margin:12px 0;
+  border-radius:16px;
+  border:1px solid #2a2a2a;
   font-weight:bold;
+  font-size:16px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.4);
+  transition:0.2s;
+  opacity:0;
+  animation:fadeIn 1s ease forwards;
 }
 
+.btn:nth-child(1){animation-delay:0.5s;}
+.btn:nth-child(2){animation-delay:0.6s;}
+.btn:nth-child(3){animation-delay:0.7s;}
+.btn:nth-child(4){animation-delay:0.8s;}
+
+.btn:hover{
+  transform:scale(1.04);
+}
+
+.btn:active{
+  transform:scale(0.97);
+}
+
+/* BOTÓN PRINCIPAL */
 .btn.gold{
   background:#d4af37;
   color:#000;
+  border:none;
+  box-shadow:0 0 20px rgba(212,175,55,0.5);
 }
 
 /* SECCIONES */
 .section{
-  margin-top:30px;
+  margin-top:35px;
   text-align:left;
+  opacity:0;
+  animation:fadeIn 1s ease 0.9s forwards;
 }
 
 .section h3{
   color:#d4af37;
-  margin-bottom:10px;
+  margin-bottom:12px;
+  font-size:20px;
 }
 
 /* SERVICIOS */
 .service{
   background:#161616;
-  padding:12px;
-  border-radius:10px;
-  margin:8px 0;
+  padding:14px;
+  border-radius:14px;
+  margin:10px 0;
+  border:1px solid #222;
+  transition:0.2s;
+}
+
+.service:hover{
+  border:1px solid #d4af37;
 }
 
 /* FOOTER */
@@ -92,6 +143,8 @@ body{
   margin-top:30px;
   font-size:12px;
   color:#888;
+  opacity:0;
+  animation:fadeIn 1s ease 1s forwards;
 }
 </style>
 </head>
@@ -111,10 +164,21 @@ body{
 <div class="role">Gerente de Ingeniería</div>
 
 <!-- BOTONES -->
-<a class="btn gold" href="contacto.vcf" download>Guardar contacto</a>
-<a class="btn" href="https://wa.me/573143994146">WhatsApp</a>
-<a class="btn" href="tel:+573143994146">Llamar</a>
-<a class="btn" href="https://integral360.com.co">Sitio web</a>
+<a class="btn gold" href="contacto.vcf" download>
+  👤 Guardar contacto
+</a>
+
+<a class="btn" href="https://wa.me/573143994146">
+  💬 WhatsApp
+</a>
+
+<a class="btn" href="tel:+573143994146">
+  📞 Llamar
+</a>
+
+<a class="btn" href="https://integral360.com.co">
+  🌐 Sitio web
+</a>
 
 <!-- SERVICIOS -->
 <div class="section">
